@@ -1,0 +1,14 @@
+<div class='parent'>
+    <div class='child'>
+        <ul>
+        {{#each products}}
+            <li><a href="/products/{{this.id}}">{{ this.item }} ${{ this.price }}</a></li>
+        {{/each}}
+        </ul>
+    </div>
+    <div class='child'>
+        <h2>{{product.item}}</h2>
+        <p>{{product.description}}</p>
+        <p>{{product.price}}</p>
+    </div>
+</div>
