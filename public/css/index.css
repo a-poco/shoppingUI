@@ -1,40 +1,130 @@
-h1 {
-    color: red;
+:root {
+  --ms-lightblue: #8ECAE6;
+  --ms-bluegreen: #219EBC;
+  --ms-darkblue: #023047;
+  --ms-yellow: #FFB703;
+  --ms-orange: #FB8500;
 }
 
-.nav-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  .nav-li {
-    float: left;
-  }
-  
-  .nav-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  .nav-li a:hover {
-    background-color: #111;
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: var(--ms-lightblue);
+
   }
 
-  .parent {
-    margin: 1rem;
-    padding: 2rem 2rem;
+  h1 {
+    color: var(--ms-darkblue);
+    text-align: center;
+}
+
+  /* .nav-ul li:not(:first-child) {display: none;}
+  .nav-ul li.icon {
+    float: right;
+    display: block;
+  } */
+
+  button {
+    display: block;
+    margin:0.4em auto;
+    padding:0.35em 1.2em;
+    border:0.1em solid #7c3c3cd0;
+    /* margin:0 0.3em 0.3em 0; */
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#023047;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: var(--ms-yellow);
+    
   }
-  .child {
-    display: inline-block;
-    padding: 0.5rem 0.5rem;
-    vertical-align: middle;
-    margin: 3rem;
-    width: 30%;
+  button:hover {
+    color: var(--ms-darkblue);
+    background-color: var(--ms-orange);
   }
+  /* @media all and (max-width:30em){
+  button {
+    display:block;
+    margin:0.4em auto;
+  }
+  } */
+  
+  .nav-ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: var(--ms-bluegreen);
+    }
+    
+    /* .nav-li {
+      float: left;
+    } */
+    
+    .nav-li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      width: 100%;
+    }
+    
+    /* Change the link color to #111 (black) on hover */
+    .nav-li a:hover {
+      background-color: var(--ms-darkblue);
+    }
+  
+    .parent {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .child {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.5rem 0.5rem;
+      vertical-align: middle;
+      width: 50%;
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:900px) {
+  body {
+    background-color: greenyellow;
+  }
+  button {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #7c3c3cd0;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:red;
+    text-align:center;
+    transition: all 0.2s;
+    background-color:#665a5a;
+  }
+  button:hover {
+    color:green;
+    background-color:#FFFFFF;
+  }
+  @media all and (max-width:30em){
+  button {
+    display:block;
+    margin:0.4em auto;
+  }
+  }
+}
+/* button {
+  font-size: large;
+} */
+
